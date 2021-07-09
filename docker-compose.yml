@@ -1,0 +1,11 @@
+version: 2.1
+volumes: {}
+services:
+  builder:
+    build: ./builder
+    environment:
+      COMMIT: 4df1d313d5e52a12d90565185e4cb768ca67b1ca
+      REPOSITORY: https://github.com/balena-os/balena-intel
+      MACHINE: genericx86-64-ext
+    network_mode: host
+    privileged: true
